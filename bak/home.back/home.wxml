@@ -1,0 +1,26 @@
+<!--pages/Home/home.wxml-->
+<view>
+ <text>{{title}}</text>
+</view>
+<!-- wx:for-item="yyqz"更改名子写成yyqz.id -->
+<view 
+wx:for="{{list}}" 
+wx:key="{{item.id}}" 
+wx:for-key="idx"
+>
+{{idx}}-{{item.title}}-{{item.id}}
+</view>
+<!-- 通过handleTap绑定事件,绑定的事件处理函数直接写在page构造函数里 -->
+<!-- 传递参数，通过自定义属性，但是自定义属性必须是data-属性="值" -->
+<button bindtap='handleTap' data-name="yiyangqianxi">点击一下</button>
+<!-- bind事件名是冒泡事件，catch事件名是非冒泡事件 -->
+<view bindtap='tap1'>
+tap1
+<view bindtap='tap2'>
+tap2
+<view catchtap='tap3'>
+tap3
+</view>
+</view>
+</view>
+<input class='my-input' bindinput='handleInput'></input>

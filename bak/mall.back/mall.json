@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "烊商城",
+    "usingComponents": {
+      "todo-input": "../../components/TodoInput/TodoInput"
+    }
+}

@@ -1,0 +1,4 @@
+/* pages/Home/home.wxss */
+.my-input{
+  border: 1px solid red;
+}

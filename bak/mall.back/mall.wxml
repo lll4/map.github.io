@@ -1,0 +1,47 @@
+<!--pages/mall/mall.wxml-->
+<todo-input name="abc"></todo-input>
+<view class='input-bar'>
+<input 
+value='{{inputValue}}' 
+placeholder='请输入todo'
+bindinput='handelInput'
+class='todo-input'
+>
+</input>
+<view class='add' catchtap='handleAdd'>添加</view>
+</view>
+
+<view>
+<view
+ wx:for="{{todos}}"
+  wx:key="index"
+  >
+ <!-- 
+ <text>
+ {{item.title}}
+ </text>
+ <text>
+ {{item.isCompleted? '已完成':'未完成'}}
+ </text> -->
+ <text>
+ {{item.title}}
+ </text>
+ <text wx:if="{{item.isCompleted}}">已完成</text>
+ <text wx:else>未完成</text>
+ </view>
+  <view class="page__hd">
+        <view class="page__title">Input</view>
+        <view class="page__desc">表单输入</view>
+   </view>
+   <view class="weui-cell weui-cell_input weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入手机号" />
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="weui-vcode-btn">获取验证码</view>
+                </view>
+            </view>
+</view>
